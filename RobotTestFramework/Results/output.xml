@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180730 14:52:32.846" generator="Robot 3.0.4 (Python 2.7.13 on win32)">
+<suite source="C:\Robot\RobotTestAutomation-NVI\Tests\NVI.robot" id="s1" name="NVI">
+<kw type="setup" name="Verify Testing Start" library="common">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testing Started</arg>
+</arguments>
+<msg timestamp="20180730 14:52:32.997" level="INFO">Testing Started</msg>
+<status status="PASS" endtime="20180730 14:52:32.997" starttime="20180730 14:52:32.997"></status>
+</kw>
+<status status="PASS" endtime="20180730 14:52:32.997" starttime="20180730 14:52:32.996"></status>
+</kw>
+<test id="s1-t1" name="Test case 1">
+<kw type="setup" name="Begin Web Test" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${Website Url}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20180730 14:52:32.998" level="INFO">Opening browser 'Chrome' to base url 'https://www.nationalvision.com/'.</msg>
+<status status="PASS" endtime="20180730 14:52:36.680" starttime="20180730 14:52:32.998"></status>
+</kw>
+<status status="PASS" endtime="20180730 14:52:36.680" starttime="20180730 14:52:32.998"></status>
+</kw>
+<kw name="Search for Products" library="NVI">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.nationalvision.com/</arg>
+</arguments>
+<msg timestamp="20180730 14:52:36.682" level="INFO">Opening url 'https://www.nationalvision.com/'</msg>
+<status status="PASS" endtime="20180730 14:52:36.859" starttime="20180730 14:52:36.682"></status>
+</kw>
+<status status="PASS" endtime="20180730 14:52:36.860" starttime="20180730 14:52:36.681"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>We believe everyone deserves to see their best to live their best.</arg>
+</arguments>
+<status status="PASS" endtime="20180730 14:52:36.913" starttime="20180730 14:52:36.860"></status>
+</kw>
+<status status="PASS" endtime="20180730 14:52:36.913" starttime="20180730 14:52:36.860"></status>
+</kw>
+<status status="PASS" endtime="20180730 14:52:36.913" starttime="20180730 14:52:36.681"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180730 14:52:39.228" starttime="20180730 14:52:36.915"></status>
+</kw>
+<status status="PASS" endtime="20180730 14:52:39.228" starttime="20180730 14:52:36.914"></status>
+</kw>
+<doc>User goes to nationvision.com</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20180730 14:52:39.229" critical="yes" starttime="20180730 14:52:32.997"></status>
+</test>
+<kw type="teardown" name="Verify Testing End" library="common">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testing End</arg>
+</arguments>
+<msg timestamp="20180730 14:52:39.233" level="INFO">Testing End</msg>
+<status status="PASS" endtime="20180730 14:52:39.233" starttime="20180730 14:52:39.233"></status>
+</kw>
+<status status="PASS" endtime="20180730 14:52:39.233" starttime="20180730 14:52:39.233"></status>
+</kw>
+<doc>This is basic test for NVI</doc>
+<status status="PASS" endtime="20180730 14:52:39.233" starttime="20180730 14:52:32.849"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="NVI" pass="1">NVI</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
